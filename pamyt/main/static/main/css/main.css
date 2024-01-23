@@ -1,0 +1,140 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+background: rgb(248, 248, 248);
+
+}
+
+aside {
+float: left;
+background: rgb(43, 43, 40);
+width: 20%;
+padding: 2.5%;
+height: 100vh;
+color: rgb(227, 176, 75);
+border-right: 4px solid rgb(227, 176, 75);
+
+}
+aside img {
+width: 80px;
+margin: auto;
+}
+aside .logo {
+font-size: 40px;
+margin-left: 0%;
+font-width: bold;
+
+}
+aside h3
+{
+margin-top:50px;
+font-size: 30px;
+}
+aside ul {list-style: none}
+aside ul li {
+color: rgb(248, 248, 248);
+display: block;
+margin-top: 50px;
+transition: all .6s ease;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: rgb(241, 214, 171);
+    text-decoration: none;
+
+}
+
+a
+{
+text-decoration: none;
+
+
+}
+
+
+main .features {
+    float: left;
+    color: rgb(43, 43, 40);
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+main .features h1 {font-size: 50px; color: rgb(43, 43, 40);}
+main .features p {max-width: 700px; margin: 20px auto}
